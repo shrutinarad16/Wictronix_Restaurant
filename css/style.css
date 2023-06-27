@@ -171,6 +171,7 @@
 .nav-item {
     position: relative;
     color: #f1f8ff;
+    letter-spacing: 1px;
 }
 
 .nav-item::before {
