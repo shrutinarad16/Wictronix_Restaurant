@@ -25,10 +25,6 @@
     z-index: 99;
 }
 
-html{
-    /* scroll-behavior: smooth; */
-}
-
 /*** Spinner ***/
 #spinner {
     opacity: 0;
@@ -211,7 +207,27 @@ svg {
     outline: none;
     transition: color 0.3s;
 }
-/*  */
+
+.navbar-dark .navbar-nav .nav-link:link,
+.navbar-dark .navbar-nav .nav-link:visited {
+    position: relative;
+}
+.navbar-dark .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: orange;
+    bottom: 0;
+    left: 0;
+    transform: scale(0);
+    transition: 0.2s all ease-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+    transform: scale(1);
+}
+
 .navbar {
     transition: all 0.3s ease-in-out;
 }
@@ -232,10 +248,9 @@ svg {
 }
 
 .sticky-top.navbar-dark .navbar-nav .nav-link {
-    padding: 25px 0;
+    padding: 30px 0;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     /* color: var(--primary) !important; */
     border-bottom: 2px solid var(--primary);
@@ -300,12 +315,12 @@ svg {
         top: 0;
         left: 0;
         z-index: 999;
-        background: transparent !important;
+        background: black !important;
     }
 
     .sticky-top.navbar-dark {
         position: fixed;
-        background: var(--dark) !important;
+        background: black !important;
     }
 }
 
@@ -317,32 +332,37 @@ svg {
     background-size: cover;
 }
 
-* { box-sizing: border-box; }
-    .video-background {
-        background: #000;
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        overflow: hidden;
-        border: none;
-    }
-    .video-foreground,
-    .video-background iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        height: 100%;
-        pointer-events: none;
-        border: none;
-        box-sizing:content-box;
-    }
-    .video-foreground{
-        margin-bottom: -100px;
-        box-sizing: border-box;
-        margin-top: 80px;
-        border: none;
-    }
+* {
+    box-sizing: border-box;
+}
+.video-background {
+    background: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    border: none;
+}
+.video-foreground,
+.video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    pointer-events: none;
+    border: none;
+    box-sizing: content-box;
+}
+.video-foreground {
+    margin-bottom: -100px;
+    box-sizing: border-box;
+    margin-top: 80px;
+    border: none;
+}
 
 .hero-header img {
     animation: imgRotate 50s linear infinite;
