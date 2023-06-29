@@ -317,6 +317,33 @@ svg {
     background-size: cover;
 }
 
+* { box-sizing: border-box; }
+    .video-background {
+        background: #000;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        overflow: hidden;
+        border: none;
+    }
+    .video-foreground,
+    .video-background iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        height: 100%;
+        pointer-events: none;
+        border: none;
+        box-sizing:content-box;
+    }
+    .video-foreground{
+        margin-bottom: -100px;
+        box-sizing: border-box;
+        margin-top: 80px;
+        border: none;
+    }
+
 .hero-header img {
     animation: imgRotate 50s linear infinite;
 }
