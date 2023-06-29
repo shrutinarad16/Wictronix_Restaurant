@@ -47,14 +47,6 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
-            <div class="video-background">
-                <div class="video-foreground">
-                    <iframe
-                        src="https://www.youtube.com/embed/F3zw1Gvn4Mk?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=F3zw1Gvn4Mk"
-                        frameborder="0" allowfullscreen allow="autoplay"></iframe>
-                </div>
-            </div>
-
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="#" class="navbar-brand p-0">
                     <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>FoodY</h1>
@@ -79,45 +71,30 @@
                             </div>
                         </div>
                         <a data-item="Contact" href="contact.html" class="nav-item nav-link">Contact</a>
-                        <div class="nav-btn">
-                            <div class="nav-center">
-                                <a href="#" class="nav-btn2">
-                                    <span>BOOK A TABLE</span>
-                                    <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </nav>
-
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
-                <div class="container my-5 py-5">
+            <div class="video-background">
+                <div class="video-foreground">
+                    <video autoplay muted loop id="myVideo" style="height: 100vh; width: 100vw;">
+                        <source src="./img/bgVideo.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="container-xl py-5 mb-5">
+                <div class="container my-5 py-5 ">
                     <div class="row align-items-center g-5">
                         <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="display-3 text-white animated slideInLeft">Welcome to<br>FoodY !</h1>
-                            <br>
-                            <h3 class="enjoy">Enjoy Our Delicious Meal</h3>
-
-                            <p class="text-white animated slideInLeft mb-4 pb-2">FoodY is known for its hospitality
-                                and Food since a long time. Explore our site to the moon to find out more mind bending
-                                options and Taste !</p>
+                            <h1 class="display-3 animated slideInLeft"
+                                style="color: orange; background-color: rgba(0, 0, 0, .5);">Welcome to<br>FoodY !
+                            </h1>
+                            <!-- <br> -->
+                            <p style="color: orange;">Enjoy Our Delicious Meal</p>
                             <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A
                                 Table</a>
                         </div>
-                        <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <!-- <img class="img-fluid" src="img/hero.png" alt=""> -->
-                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="video-container">
-                <iframe id="video-player"
-                    src="https://www.youtube.com/embed/pq3Otf0zbdk?autoplay=1&controls=0&loop=1&mute=1&playlist=pq3Otf0zbdk"
-                    frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
         <!-- Navbar & Hero End -->
